@@ -4,6 +4,10 @@ public class F1 extends Car {
 
     public F1(String name, boolean isManual) {
         //Use arbitrary values for parameters which are not mentioned
+
+        super(name,4,4,5,false,"BMW",4);
+
+
     }
 
     public void accelerate(int rate){
@@ -20,7 +24,21 @@ public class F1 extends Car {
 
         if(newSpeed == 0) {
             //Stop the car, set gear as 1
+            super.stop();
+
+            super.changeGear(1);
         }
+        else if(newSpeed >=1 && newSpeed<=50){
+            super.changeGear(1);
+        }
+        else if(newSpeed >=51 && newSpeed<=100){
+            super.changeGear(2);
+        }
+        else if(newSpeed>=101 && newSpeed <=150) super.changeGear(3);
+
+        else if(newSpeed>=151 && newSpeed<=200) super.changeGear(4);
+        else if(newSpeed>=201 && newSpeed<=250) super.changeGear(5);
+        else if(newSpeed>250) super.changeGear(6);
         //for all other cases, change the gear accordingly
 
         if(newSpeed > 0) {
