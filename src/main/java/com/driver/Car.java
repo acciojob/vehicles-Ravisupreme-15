@@ -13,18 +13,19 @@ public class Car extends Vehicle {
         //Hint: Car extends Vehicle
 
         super(name);
-        this.doors = doors;
         this.wheels = wheels;
-        this.isManual = isManual;
-        this.currentGear = 1;
-        this.type = type;
-        this.seats = seats;
         this.doors =doors;
         this.gears = gears;
+        this.currentGear = 1;
+        this.isManual = isManual;
+        this.type = type;
+        this.seats = seats;
+
+
     }
 
     public int getWheels() {
-        return wheels;
+        return this.wheels;
     }
 
     public void setWheels(int wheels) {
