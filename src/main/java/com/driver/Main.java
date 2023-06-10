@@ -7,9 +7,7 @@ public class Main {
         mercedes.accelerate(20);
         mercedes.accelerate(-60);
 
-        Car car = new Car("thaar", 4  ,3, 5,false,"4X4", 4);
 
-        car.changeSpeed(80,4);
 
     }
 }
